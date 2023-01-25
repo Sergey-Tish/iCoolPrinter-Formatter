@@ -20,6 +20,20 @@ which add to the beginning of the line two astericks ("** ... **")
                 return "** " + line + " **";
             }
         });
+        System.out.println();
+        CoolPrinter.print(new Formatter() {
+            @Override
+            public String format(String line) {
+                return line.toUpperCase();
+            }
+        });
+        System.out.println();
+        CoolPrinter.print(new Formatter() {
+            @Override
+            public String format(String line) {
+                return "-= " + line.toLowerCase() + " =-";
+            }
+        });
         //CoolPrinter.print(/*pass anonymous Formatter here*/);
 
 /* 
