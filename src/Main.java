@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class Main {
 
 
@@ -12,7 +14,12 @@ which add to the beginning of the line two astericks ("** ... **")
         CoolPrinter.add("I love you.");
         CoolPrinter.add("Three, four,");
         CoolPrinter.add("Touch the floor.");
-        CoolPrinter.print();
+        CoolPrinter.print(new Formatter() {
+            @Override
+            public String format(String line) {
+                return "** " + line + " **";
+            }
+        });
         //CoolPrinter.print(/*pass anonymous Formatter here*/);
 
 /* 
